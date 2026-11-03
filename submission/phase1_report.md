@@ -77,14 +77,14 @@ hundred. For each of the three platforms, answer concretely:
 to the second question.)
 
 <!--answer:scaling_behaviour-->
-The VM does not create new instances automatically, it uses one e2-micro machine. Its capacity is limited by that machine and its container configuration. Cloud Run can start new container instances when demand increases. I set a maximum of three instances, and it can scale down to zero when idle. The Cloud Function can also start new instances when demand increases. I set a maximum of three instances, it can also scale down to zero.
+The VM does not create new instances automatically, it uses one e2-micro machine. Its capacity is limited by that machine and its container configuration. Cloud Run can start new container instances when demand increases. I set a maximum of three instances, and it can scale down to zero when idle. The Cloud Function can also start new instances when demand increases. I set a maximum of three instances, it can also scale down to zero. The VM was already running. Its first request was not a true cold start.
 <!--/answer-->
 
 **Deployment effort.** What did you have to build, configure and maintain to get each of the
 three running? (~100 words)
 
 <!--answer:deployment_effort-->
-For the VM, I created a VPC, a subnet, firewall rules and a virtual machine. I installed Docker, configured access to Artifact Registry, and started the container. I also had to manage the machine and its network access. For Cloud Run, I deployed the container image from Artifact Registry. I configured the region, port and instance limits. Google managed the servers and instances. For the Cloud Function, I deployed the source code and selected the Python runtime and entry point. Google built and deployed the function. I did not manage a VM.
+For the VM, I created a VPC, a subnet, firewall rules and a virtual machine. I installed Docker, configured access to Artifact Registry, and started the container. I also had to manage the machine and its network access. For Cloud Run, I deployed the container image from Artifact Registry. I configured the region, port and instance limits. Google managed the servers and instances. For the Cloud Function, I deployed the source code and selected the Python runtime and entry point. Google built and deployed the function. I did not manage a VM. The firewall rules use the echo-http tag to target only VMs with that tag.
 <!--/answer-->
 
 ---
