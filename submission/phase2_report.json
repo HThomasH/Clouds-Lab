@@ -1,0 +1,30 @@
+{
+  "phase": "2",
+  "environment": {
+    "colab": true
+  },
+  "attention": {
+    "naive_ms": 417.198,
+    "vectorized_ms": 1.16,
+    "speedup": 359.65
+  },
+  "threads": {
+    "1": 2817.354,
+    "2": 2061.491,
+    "4": 2196.219,
+    "8": 2288.857
+  },
+  "devices": {
+    "cpu_ms": 458341.2,
+    "gpu_ms": 13858.4
+  },
+  "training": {
+    "steps": 2000,
+    "final_loss": 1.4576,
+    "param_count": 4935680
+  },
+  "sample": "\naman too good Phuchio!\n\nPETRUCHIO:\nTither a botherful as upon and sway and swain.\n\nSICINIUS:\nNaver shall I sell wit the not: desires,\nFor if Norfol forth she Julita:\nNow spore him life, I know with me",
+  "model": {
+    "gcs_url": "https://storage.googleapis.com/project-6aa7490c-6568-40dd-af9-eurecomgpt/model.safetensors"
+  }
+}
